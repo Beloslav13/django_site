@@ -31,3 +31,8 @@ $RECYCLE.BIN/
 # End of https://www.gitignore.io/api/windows
 /env/
 /.idea/
+/root_settings.py
+*.py[co]
+*.sw[po]
+*~
+/secrets.json
