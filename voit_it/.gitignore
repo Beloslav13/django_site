@@ -36,3 +36,4 @@ $RECYCLE.BIN/
 *.sw[po]
 *~
 /secrets.json
+/media/

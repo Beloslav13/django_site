@@ -1,10 +1,34 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
 <body>
 <h1>Hello!</h1>
+{% for post in posts %}
+    <p>{{ post.published_date }}</p>
+    <p>
+        {{post.author}}
+    </p>
+    <p>
+        {{post.title}}
+    </p>
+    {% if post.image %}
+        <ul>
+            <p>
+                yes
+            </p>
+            <img src="{{ MEDIA_URL }}{{ post.image.url }}"/>
+        </ul>
+    {% else %}
+        <p>
+            No Images...
+        </p>
+    {% endif %}
+    <p>
+        {{post.text}}
+    </p>
+{% endfor %}
 </body>
 </html>

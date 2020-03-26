@@ -10,7 +10,7 @@ class Post(models.Model):
     author = models.CharField(max_length=150)
     title = models.CharField(max_length=150)
     text = models.TextField()
-    image = models.ImageField(blank=True)
+    image = models.ImageField(upload_to='uploads', blank=True)
     create_date = models.DateTimeField(default=timezone.now)
     published_date = models.DateTimeField(blank=True, null=True)
 
