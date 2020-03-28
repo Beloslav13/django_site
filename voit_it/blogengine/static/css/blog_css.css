@@ -22,10 +22,15 @@ div, p, form, input, a, span, button {
     padding-bottom: 15px !important;
 }
 
-figure {
+/*Index Page*/
+
+
+/*Post Section*/
+
+.post-figure {
+    margin: auto;
 }
 
-.card-img-top {
-    /*max-height: 250px;*/
-    /*max-width: 50%;*/
+.card {
+    margin-bottom: 100px;
 }
