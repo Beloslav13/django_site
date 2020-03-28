@@ -38,7 +38,7 @@ SECRET_KEY = get_secret('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 # Application definition
 
@@ -49,8 +49,15 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'blogengine.apps.BlogengineConfig'
+    'blogengine.apps.BlogengineConfig',
+    'easy_thumbnails',
 ]
+
+THUMBNAIL_ALIASES = {
+    '': {
+        'image_thumb': {'size': (250, 250), 'crop': True},
+    },
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
