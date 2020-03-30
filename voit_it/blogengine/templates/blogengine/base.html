@@ -22,9 +22,9 @@
                     </button>
                     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                         <div class="navbar-nav">
-                            <a class="nav-item nav-link active" href="/">Главная <span class="sr-only">(current)</span></a>
+                            <a class="nav-item nav-link active" href="{% url 'index' %}">Главная <span class="sr-only">(current)</span></a>
+                            <a class="nav-item nav-link" href="{% url 'posts_list' %}">Всё обо всём</a>
                             <a class="nav-item nav-link" href="#">Категории</a>
-                            <a class="nav-item nav-link" href="#">Pricing</a>
                         </div>
                     </div>
                 </nav>

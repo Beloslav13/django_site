@@ -5,10 +5,14 @@ from django.utils import timezone
 from .models import Post
 
 
+def index(request):
+    return render(request, 'blogengine/index.html')
+
+
 def posts_list(request):
     """Все посты"""
     posts = Post.objects.filter(published_date__lte=timezone.now())
-    return render(request, 'blogengine/index.html', context={'posts': posts})
+    return render(request, 'blogengine/posts_list.html', context={'posts': posts})
 
 
 def post_details(request, slug):
