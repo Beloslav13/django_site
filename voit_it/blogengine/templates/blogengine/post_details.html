@@ -1,0 +1,26 @@
+{% extends 'blogengine/base.html' %}
+{% load easy_thumbnails_tags %}
+{% block title %}
+{{ block.super}}
+{% endblock %}}
+
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="detail">
+                <figure>
+                    <img src="{{MEDIA_URL}}{% thumbnail post.image 700x600 crop %}" alt="">
+                </figure>
+                <h1>
+                    {{ post.title }}
+                </h1>
+                <p>
+                    {{ post.text }}
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
