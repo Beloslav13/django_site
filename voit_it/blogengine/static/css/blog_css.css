@@ -3,12 +3,61 @@ body {
     padding: 0;
     margin: 0;
     letter-spacing: 0.02em;
-    font-size: 17px;
+    font-size: 16px;
     overflow-x: hidden;
 }
 
 html {
   overflow-x: hidden;
+}
+
+div, p, form, input, a, span, button {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+p {
+    letter-spacing: 0.02em;
+    line-height: 1.3em;
+}
+
+a, button, button:hover, button:focus, button:active, a:hover, a:active {
+    text-decoration: none;
+    outline: none;
+	transition: all 0.5s ease;
+}
+
+button {
+    background: transparent;
+    border: none;
+}
+
+.btn {
+    width: 150px;
+    line-height: 28px;
+    border: 1px solid #2d203f;
+    font-size: 17px;
+    background-color: #2d203f;
+    color: #ffffffd4;
+}
+
+ul, li {
+	display: block;
+	padding: 0;
+	margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	padding: 0;
+	margin: 0;
+	text-transform: uppercase;
+}
+
+h1, h2 {
+    font-size: 45px;
+    font-weight: 700;
+    color: #ffffffd4;
+    text-align: center;
 }
 
 div, p, form, input, a, span, button {
@@ -22,10 +71,53 @@ div, p, form, input, a, span, button {
     padding-bottom: 15px !important;
 }
 
-/*Index Page*/
+#header {
+    background-color: #2d203f;
+}
 
+.auth-wrap a{
+    color: rgba(255,255,255,.5);
+}
 
-/*Post Section*/
+.auth-wrap a:hover {
+    color: rgba(255,255,255,.75);
+}
+
+.auth-wrap_login {
+    margin-right: 10px;
+}
+
+/* ----- Index Page ----- */
+.index-section {
+    background: rgb(125,20,159);
+    background: -moz-linear-gradient(56deg, rgba(125,20,159,1) 0%, rgba(46,9,94,1) 100%);
+    background: -webkit-linear-gradient(56deg, rgba(125,20,159,1) 0%, rgba(46,9,94,1) 100%);
+    background: linear-gradient(56deg, rgba(125,20,159,1) 0%, rgba(46,9,94,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#7d149f",endColorstr="#2e095e",GradientType=1);
+    box-shadow: inset -1px 5px 10px rgba(0,0,0,0.5);
+    padding-bottom: 150px;
+    padding-top: 250px;
+}
+
+.main-title_bt {
+    margin-bottom: 50px;
+}
+
+.index-buttons {
+    text-align: center;
+}
+
+.reading_btn {
+    margin-right: 50px;
+}
+
+.reading_btn:hover, .write_btn:hover {
+    background-color: transparent;
+    border: 1px solid #ffffffd4;
+    color: #fff;
+}
+
+/* -----Post Section ----- */
 
 .post-figure {
     margin: auto;

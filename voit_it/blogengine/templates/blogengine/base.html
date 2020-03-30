@@ -10,22 +10,26 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" rel="stylesheet">
 </head>
 <body>
-<header class="header bg-dark" id="header">
+<header class="header" id="header">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <nav class="navbar navbar-expand-lg navbar-dark bg-dark nav-it">
-                    <a class="navbar-brand" href="#">В IT</a>
+                <nav class="navbar navbar-expand-lg navbar-dark nav-it">
+                    <a class="navbar-brand" href="{% url 'index' %}">VSEOBOVSEM</a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
                             aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                         <div class="navbar-nav">
-                            <a class="nav-item nav-link active" href="{% url 'index' %}">Главная <span class="sr-only">(current)</span></a>
-                            <a class="nav-item nav-link" href="{% url 'posts_list' %}">Всё обо всём</a>
-                            <a class="nav-item nav-link" href="#">Категории</a>
+                            <a class="nav-item nav-link active" href="{% url 'posts_list' %}">Читать <span class="sr-only">(current)</span></a>
+                            <a class="nav-item nav-link" href="/">Писать</a>
+                            <a class="nav-item nav-link" href="/">Категории</a>
                         </div>
+                    </div>
+                    <div class="auth-wrap">
+                        <a href="#" class="auth-wrap_login">В IT</a>
+                        <a href="#" class="auth-wrap_register">Регистрация</a>
                     </div>
                 </nav>
             </div>

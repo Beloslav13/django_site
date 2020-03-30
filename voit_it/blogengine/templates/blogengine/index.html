@@ -5,4 +5,26 @@
 {% endblock %}}
 
 {% block content %}
+<section class="index-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="wrap-title">
+                    <h1 class="main-title">
+                        Пишу про всё!
+                    </h1>
+                    <h2 class="main-title_bt">
+                        Читай и пиши вместе со мной!
+                    </h2>
+                </div>
+            </div>
+            <div class="col-lg-12">
+                <div class="index-buttons">
+                    <a href="{% url 'posts_list' %}" class="reading_btn btn">Читать</a>
+                    <a href="/" class="write_btn btn">Писать</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 {% endblock %}
