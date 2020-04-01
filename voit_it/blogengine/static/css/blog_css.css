@@ -25,6 +25,11 @@ a, button, button:hover, button:focus, button:active, a:hover, a:active {
     text-decoration: none;
     outline: none;
 	transition: all 0.5s ease;
+    display: block;
+}
+
+.d-flex {
+    display: flex;
 }
 
 button {
@@ -71,7 +76,11 @@ div, p, form, input, a, span, button {
     padding-bottom: 15px !important;
 }
 
-#header {
+.navbar-brand, .brand {
+    text-transform: uppercase;
+}
+
+#header, #footer {
     background-color: #2d203f;
 }
 
@@ -87,8 +96,20 @@ div, p, form, input, a, span, button {
     margin-right: 10px;
 }
 
+/* ----- Footer Section ----- */
+
+.brand {
+    color: #ffffffd4;
+    font-size: 1.25rem;
+}
+
+.link-footer {
+    margin-top: 15px;
+    text-align: right;
+}
+
 /* ----- Index Page ----- */
-.index-section {
+.index-section, .section-bg {
     background: rgb(125,20,159);
     background: -moz-linear-gradient(56deg, rgba(125,20,159,1) 0%, rgba(46,9,94,1) 100%);
     background: -webkit-linear-gradient(56deg, rgba(125,20,159,1) 0%, rgba(46,9,94,1) 100%);
@@ -97,6 +118,7 @@ div, p, form, input, a, span, button {
     box-shadow: inset -1px 5px 10px rgba(0,0,0,0.5);
     padding-bottom: 150px;
     padding-top: 250px;
+    height: 100vh;
 }
 
 .main-title_bt {
@@ -104,8 +126,8 @@ div, p, form, input, a, span, button {
 }
 
 .index-buttons {
-    text-align: center;
-}
+    display: flex;
+    justify-content: center;}
 
 .reading_btn {
     margin-right: 50px;
@@ -125,4 +147,8 @@ div, p, form, input, a, span, button {
 
 .card {
     margin-bottom: 100px;
+}
+
+.section-bg {
+    padding-top: 100px;
 }

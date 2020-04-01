@@ -6,6 +6,7 @@ from .models import Post
 
 
 def index(request):
+    """Главная страница"""
     return render(request, 'blogengine/index.html')
 
 

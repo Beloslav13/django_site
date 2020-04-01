@@ -6,9 +6,10 @@
 
 {% block content %}
 
-<section class="main-section">
+<section class="main-section section-bg">
     <div class="container">
         <div class="row">
+            {% if posts %}
             {% for post in posts %}
             <div class="col-lg-6">
                 <div class="card-wrap d-flex">
@@ -20,13 +21,18 @@
                             {% endif %}
                             <div class="card-body">
                                 <h5 class="card-title">{{ post.title }}</h5>
-                                <p class="card-text">{{ post.text|truncatewords:5  }}</p>
+<!--                                <p class="card-text">{{ post.text|truncatewords:10  }}</p>-->
                                 <a href="{{ post.get_absolute_url }}" class="btn btn-primary">Читать</a>
                             </div>
                         </div>
                 </div>
             </div>
             {% endfor %}
+            {% else %}
+            <p>
+                No posts.
+            </p>
+            {% endif %}
         </div>
     </div>
 </section>
