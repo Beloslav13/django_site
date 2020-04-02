@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django import forms
-from .models import Post
+from .models import Post, Category
 from ckeditor_uploader.widgets import CKEditorUploadingWidget
 
 
@@ -25,3 +25,4 @@ class PostAdmin(admin.ModelAdmin):
 
 
 admin.site.register(Post, PostAdmin)
+admin.site.register(Category)

@@ -1,0 +1,24 @@
+{% extends 'blogengine/base.html' %}
+
+{% block title %}
+{{ category.title }} - {{ block.super}}
+{% endblock %}}
+
+{% block content %}
+
+<h1>
+    Category detail
+</h1>
+<p>
+    {{ category.title|title }} категория:
+</p>
+
+{% for cat in category.posts.all %}
+
+<p>
+    {{ cat }}
+</p>
+
+{% endfor %}
+
+{% endblock %}
