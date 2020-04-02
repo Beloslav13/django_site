@@ -8,7 +8,7 @@
 - склонировать его
 </p>
 <p>
-- в файле settigns.py закомменировать DATABASES с PostgreSQL и раскомментировать с sqlite3
+- в файле settings.py закомменировать DATABASES с PostgreSQL и раскомментировать с sqlite3
 </p>
 <p>
 - установить все пакеты
