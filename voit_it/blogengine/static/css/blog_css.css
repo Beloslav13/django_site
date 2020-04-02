@@ -108,6 +108,10 @@ div, p, form, input, a, span, button {
     text-align: right;
 }
 
+.footer {
+    box-shadow: 1px 0px 10px rgba(0,0,0,0.5);
+}
+
 /* ----- Index Page ----- */
 .index-section, .section-bg {
     background: rgb(125,20,159);
