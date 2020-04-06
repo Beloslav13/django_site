@@ -21,6 +21,7 @@ div, p, form, input, a, span, button {
 p {
     letter-spacing: 0.02em;
     line-height: 1.3em;
+    color: rgba(255,255,255,.5);
 }
 
 a, button, button:hover, button:focus, button:active, a:hover, a:active {
@@ -58,6 +59,7 @@ h1, h2, h3, h4, h5, h6 {
 	padding: 0;
 	margin: 0;
 	text-transform: uppercase;
+    color: #ffffffd4;
 }
 
 h1, h2 {
@@ -155,36 +157,58 @@ div, p, form, input, a, span, button {
     padding-top: 100px;
 }
 
+.post-main-title {
+    font-size: 40px;
+    margin-bottom: 70px;
+    text-align: left;
+    text-transform: none;
+}
+
 .post-wrap {
-    margin-bottom: 50px;
+    margin-bottom: 100px;
+    background: #2d203f;
+    border-radius: 5px;
+    box-shadow: 0px 0px 18px 4px rgba(0, 0, 0, 0.5);
+}
+
+.post-wrap:hover {
+    background-color: #211143;
+    transition: ease 0.5s;
+    cursor: pointer;
 }
 
 .post {
     /*margin-bottom: 100px;*/
     justify-content: space-between;
-    border: 1px solid red;
-    padding: 15px;
+    padding: 20px;
 }
 
 .post-text {
     flex-direction: column;
     justify-content: space-between;
+    padding-right: 20px;
 }
 
 .post-title {
-
+    font-size: 20px;
 }
 
 .post-text_detail {
     margin-top: 30px;
+    color: rgba(255,255,255,.5);
 }
 
 .category-wrap {
     margin-top: 20px;
 }
 
+.category-wrap a {
+    display: inline-block;
+}
+
 .btn-post {
     margin-top: auto;
+    background: #7b29a5;
 }
 
 .post-img {
