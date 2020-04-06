@@ -5,10 +5,12 @@ body {
     letter-spacing: 0.02em;
     font-size: 16px;
     overflow-x: hidden;
+    height: 100vh;
 }
 
 html {
   overflow-x: hidden;
+    height: 100vh;
 }
 
 div, p, form, input, a, span, button {
@@ -110,18 +112,23 @@ div, p, form, input, a, span, button {
 
 .footer {
     box-shadow: 1px 0px 10px rgba(0,0,0,0.5);
+    padding-bottom: 10px;
+    padding-top: 10px;
 }
 
 /* ----- Index Page ----- */
 .index-section, .section-bg {
-    background: rgb(125,20,159);
-    background: -moz-linear-gradient(56deg, rgba(125,20,159,1) 0%, rgba(46,9,94,1) 100%);
-    background: -webkit-linear-gradient(56deg, rgba(125,20,159,1) 0%, rgba(46,9,94,1) 100%);
-    background: linear-gradient(56deg, rgba(125,20,159,1) 0%, rgba(46,9,94,1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#7d149f",endColorstr="#2e095e",GradientType=1);
-    box-shadow: inset -1px 5px 10px rgba(0,0,0,0.5);
+    background: rgb(125, 20, 159);
+    background: -moz-linear-gradient(56deg, rgba(125, 20, 159, 1) 0%, rgba(46, 9, 94, 1) 100%);
+    background: -webkit-linear-gradient(56deg, rgba(125, 20, 159, 1) 0%, rgba(46, 9, 94, 1) 100%);
+    background: linear-gradient(56deg, rgba(125, 20, 159, 1) 0%, rgba(46, 9, 94, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#7d149f", endColorstr="#2e095e", GradientType=1);
+    box-shadow: inset -1px 5px 10px rgba(0, 0, 0, 0.5);
     padding-bottom: 150px;
     padding-top: 250px;
+}
+
+.index-section {
     height: 100vh;
 }
 
@@ -144,15 +151,55 @@ div, p, form, input, a, span, button {
 }
 
 /* -----Post Section ----- */
+.section-bg_pt {
+    padding-top: 100px;
+}
+
+.post-wrap {
+    margin-bottom: 50px;
+}
+
+.post {
+    /*margin-bottom: 100px;*/
+    justify-content: space-between;
+    border: 1px solid red;
+    padding: 15px;
+}
+
+.post-text {
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.post-title {
+
+}
+
+.post-text_detail {
+    margin-top: 30px;
+}
+
+.category-wrap {
+    margin-top: 20px;
+}
+
+.btn-post {
+    margin-top: auto;
+}
+
+.post-img {
+
+}
 
 .post-figure {
     margin: auto;
 }
 
-.card {
-    margin-bottom: 100px;
+.post-img {
+    margin-left: auto;
+    width: auto;
 }
 
-.section-bg_pt {
-    padding-top: 100px;
+.navbar-right {
+    position: fixed;
 }
