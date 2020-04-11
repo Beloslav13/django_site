@@ -33,10 +33,6 @@ class Post(models.Model):
         self.published_date = timezone.now()
         self.save()
 
-    def get_clear_text(self):
-        """Получить отформатированный текст от тегов HTML."""
-        pattern = re.sub(r'(\<(/?[^>]+)>)', '', self.text)
-        return pattern[:200]
 
     def __str__(self):
         return self.title

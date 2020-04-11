@@ -1,3 +1,5 @@
+import re
+
 from django.contrib import admin
 from django import forms
 from .models import Post, Category
@@ -20,6 +22,11 @@ class PostAdmin(admin.ModelAdmin):
     list_filter = ('published_date',)
     list_display_links = ('author', 'title',)
     search_fields = ["title", "text"]
+
+    def get_clear_text(self, obj):
+        """Получить отформатированный текст от тегов HTML."""
+        return re.sub(r'(\<(/?[^>]+)>)', '', obj.text[:200])
+    get_clear_text.short_description = 'Детальное описание'
 
     form = PostAdminForm
 
