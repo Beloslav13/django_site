@@ -6,17 +6,62 @@
 
 {% block content %}
 
-<h1>
-    Category detail
-</h1>
-<p>
-    {{ category.title|title }} категория:
-</p>
+<section class="category-section section-bg_pt">
+    <div class="container" role="main">
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="base_title_page base_title_page_category">
+                     Категория: {{ category.title|title }}
+                </h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-9">
+                <div class="row">
+                    {% for cat in category.posts.all %}
 
-{% for category in category.posts.all %}
+                    <!--<a href="{{ cat.get_absolute_url }}"> {{cat.title }}</a>-->
+                    <div class="col-lg-12">
+                        <div class="post-wrap">
+                            <div class="post d-flex">
+                                <div class="post-text d-flex">
+                                    <h5 class="post-title">{{ cat.title }}</h5>
+                                    {% autoescape off %}
+                                    <p class="post-text_detail">{{ cat.text|truncatewords:20|striptags }}</p>
+                                    {% endautoescape %}
+                                    <div class="category-wrap">
+                                        <a href="{{ category.get_absolute_url }}">{{ category.title }}</a>
+                                    </div>
+                                    <a href="{{ cat.get_absolute_url}}" class="btn btn-primary btn-post">Читать</a>
+                                </div>
+                                <div class="post-img">
+                                    {% if cat.image %}
+                                    <figure class="post-figure">
+                                        <img src="{{ MEDAI_URL }}{{cat.image.image_thumb.url}}" alt="Image Post">
+                                    </figure>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="navbar-right">
+                            <h5 style="text-align: center; color: white">
+                                Тут боковое меню
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-<a href="{{ category.get_absolute_url }}"> {{category.title }}</a>
 
-{% endfor %}
+    </div>
+</section>
 
 {% endblock %}

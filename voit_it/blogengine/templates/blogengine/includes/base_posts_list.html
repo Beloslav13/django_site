@@ -5,7 +5,9 @@
                 <div class="post d-flex">
                         <div class="post-text d-flex">
                             <h5 class="post-title">{{ post.title }}</h5>
-                            <p class="post-text_detail">{{ post.text|truncatewords:20|safe }}</p>
+                            {% autoescape off %}
+                            <p class="post-text_detail">{{ post.text|truncatewords:20|striptags }}</p>
+                            {% endautoescape %}
                             <div class="category-wrap">
                                 {% for category in post.categories.all %}
                                     <a href="{{ category.get_absolute_url }}">{{ category.title }}</a>

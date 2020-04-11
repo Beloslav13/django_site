@@ -74,6 +74,13 @@ div, p, form, input, a, span, button {
     margin: 0;
 }
 
+.base_title_page {
+    font-size: 40px;
+    margin-bottom: 70px;
+    text-align: left;
+    text-transform: none;
+}
+
 /* ----- Header Styles ----- */
 .nav-it {
     padding-top: 15px !important;
@@ -158,10 +165,7 @@ div, p, form, input, a, span, button {
 }
 
 .post-main-title {
-    font-size: 40px;
-    margin-bottom: 70px;
-    text-align: left;
-    text-transform: none;
+
 }
 
 .post-wrap {
@@ -226,4 +230,15 @@ div, p, form, input, a, span, button {
 
 .navbar-right {
     position: fixed;
+}
+
+
+/* ----- Category detail Page ----- */
+
+.category-section {
+    /*background: #1f292e;*/
+}
+
+.base_title_page_category {
+    color: #000;
 }
