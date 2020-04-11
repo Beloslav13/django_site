@@ -16,7 +16,7 @@ class PostAdminForm(forms.ModelForm):
 class PostAdmin(admin.ModelAdmin):
     # автозаполнение slug из модели Post по полю title
     prepopulated_fields = {"slug": ("title",)}
-    list_display = ('author', 'title', 'text', 'published_date')
+    list_display = ('author', 'title', 'get_clear_text', 'published_date')
     list_filter = ('published_date',)
     list_display_links = ('author', 'title',)
     search_fields = ["title", "text"]

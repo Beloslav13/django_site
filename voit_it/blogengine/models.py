@@ -2,6 +2,7 @@ from django.conf import settings
 from django.db import models
 from django.shortcuts import reverse
 from easy_thumbnails.fields import ThumbnailerImageField
+import re
 
 
 # Create your models here.
@@ -31,6 +32,11 @@ class Post(models.Model):
         """Метод публикации поста"""
         self.published_date = timezone.now()
         self.save()
+
+    def get_clear_text(self):
+        """Получить отформатированный текст от тегов HTML."""
+        pattern = re.sub(r'(\<(/?[^>]+)>)', '', self.text)
+        return pattern[:200]
 
     def __str__(self):
         return self.title
