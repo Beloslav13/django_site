@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'blogengine.apps.BlogengineConfig',
+    'conf.apps.ConfigConfig',
 
     #tumbnail
     'easy_thumbnails',
@@ -143,11 +144,12 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'voit_it.urls'
-
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            os.path.join(BASE_DIR, 'templates', 'voit_it'),
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -159,7 +161,6 @@ TEMPLATES = [
         },
     },
 ]
-
 WSGI_APPLICATION = 'voit_it.wsgi.application'
 
 # Database

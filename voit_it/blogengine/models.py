@@ -2,8 +2,6 @@ from django.conf import settings
 from django.db import models
 from django.shortcuts import reverse
 from easy_thumbnails.fields import ThumbnailerImageField
-import re
-
 
 # Create your models here.
 from django.utils import timezone
@@ -32,7 +30,6 @@ class Post(models.Model):
         """Метод публикации поста"""
         self.published_date = timezone.now()
         self.save()
-
 
     def __str__(self):
         return self.title
