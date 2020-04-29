@@ -2,7 +2,7 @@ import re
 
 from django.contrib import admin
 from django import forms
-from .models.posts import Post, Category
+from blogengine.models.posts import Post, Category
 from ckeditor_uploader.widgets import CKEditorUploadingWidget
 
 
