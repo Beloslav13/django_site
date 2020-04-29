@@ -50,7 +50,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'blogengine.apps.BlogengineConfig',
-    'conf.apps.ConfigConfig',
 
     #tumbnail
     'easy_thumbnails',
@@ -143,7 +142,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'voit_it.urls'
+ROOT_URLCONF = 'blogengine.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -161,7 +160,7 @@ TEMPLATES = [
         },
     },
 ]
-WSGI_APPLICATION = 'voit_it.wsgi.application'
+WSGI_APPLICATION = 'blogengine.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases

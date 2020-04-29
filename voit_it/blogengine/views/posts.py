@@ -1,8 +1,7 @@
 from django.shortcuts import render
 from django.utils import timezone
-# Create your views here.
 
-from .models.posts import Post, Category
+from blogengine.models.posts import Post, Category
 
 
 def index(request):

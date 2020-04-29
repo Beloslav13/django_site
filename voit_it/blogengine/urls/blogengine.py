@@ -1,6 +1,7 @@
-from django.urls import path
+from django.urls import path, include
 
-from .views import posts_list, post_details, index, categories_list, category_detail
+from blogengine.views.posts import posts_list, post_details, index, categories_list, category_detail
+
 
 urlpatterns = [
     path('', index, name='index'),
@@ -9,3 +10,4 @@ urlpatterns = [
     path('categories/', categories_list, name='categories_list'),
     path('categories/<str:slug>/', category_detail, name='category_detail')
 ]
+
