@@ -25,13 +25,18 @@ class SiteLogo(Tag):
 
         if varname and siteconf is not None:
             logo_data = {
-                'logo': siteconf.logo.url if siteconf.logo else 'media/uploads/logo/logo.png',
+                'logo': siteconf.logo.url if siteconf.logo else '/media/uploads/logo/logo.png',
                 'alt': site.name
             }
             context[varname] = logo_data
             return ''
         else:
             return ''
+
+
+@register.filter(name='split')
+def split(value, sep):
+    return value.split(sep)
 
 
 register.tag(SiteLogo)
