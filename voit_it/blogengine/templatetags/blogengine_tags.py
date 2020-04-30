@@ -19,11 +19,13 @@ class SiteLogo(Tag):
         request = getattr(context, 'request', None)
         if not request:
             request = context.get('request')
+
         site = get_current_site(request)
         siteconf = getattr(site, 'siteconf', None)
+
         if varname and siteconf is not None:
             logo_data = {
-                'logo': siteconf.logo.url if siteconf.logo else '/media/uploads/logo/logo.jpg',
+                'logo': siteconf.logo.url if siteconf.logo else 'media/uploads/logo/logo.png',
                 'alt': site.name
             }
             context[varname] = logo_data
