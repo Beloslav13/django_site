@@ -203,6 +203,10 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+SITE_ID = 1
+
+LOGO = 'logo/'
+
 # Internationalization
 # https://docs.djangoproject.com/en/2.2/topics/i18n/
 

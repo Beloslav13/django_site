@@ -16,7 +16,7 @@
         <div class="row">
             <div class="col-md-6 col-lg-12">
                 <nav class="navbar navbar-expand-lg navbar-dark nav-it">
-                    <a class="navbar-brand" href="{% url 'index' %}"><img src="{% static 'image/logo.png' %}" alt=""></a>
+                    {% include 'includes/logo.html' %}
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
                             aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
@@ -45,9 +45,7 @@
         <div class="row">
             <div class="col-lg-3">
                 <div class="nav-it">
-                    <p class="brand">
-                        vseobovsem
-                    </p>
+                    {% include 'includes/logo.html' %}
                 </div>
             </div>
             <div class="col-lg-3 ml-auto">

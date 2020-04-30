@@ -12,7 +12,7 @@ class SiteConf(models.Model):
         verbose_name_plural = 'Сайт Конф'
 
     def __str__(self):
-        return self.id
+        return str(self.id)
 
     @property
     def url(self):
