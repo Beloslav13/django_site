@@ -23,9 +23,10 @@ class SiteLogo(Tag):
         site = get_current_site(request)
         siteconf = getattr(site, 'siteconf', None)
 
-        if varname and siteconf is not None:
+        if varname:
+            static_url_img = '/media/uploads/logo/logo.png'
             logo_data = {
-                'logo': siteconf.logo.url if siteconf.logo else '/media/uploads/logo/logo.png',
+                'logo': siteconf.logo.url if siteconf is not None and siteconf.logo else static_url_img,
                 'alt': site.name
             }
             context[varname] = logo_data
