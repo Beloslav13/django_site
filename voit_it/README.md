@@ -17,9 +17,14 @@
 pip install -r requirements.txt
 </pre>
 <p>
+- создать суперпользователя
+</p>
+<pre>
+python manage.py createsuperuser
+</pre>
+<p>
 - применить миграции
 <pre>
-python manage.py makemigrations blogengine
 python manage.py migrate
 </pre>
 <p>
