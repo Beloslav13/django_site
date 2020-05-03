@@ -11,7 +11,7 @@
         <div class="col-lg-6">
             <div class="detail">
                 <figure>
-                    <img src="{{MEDIA_URL}}{% thumbnail post.image 1200x720 crop %}" alt="">
+                    <img src="{{MEDIA_URL}}{% thumbnail post.image 1200x720 crop='smart' %}" alt="">
                 </figure>
                 <h1>
                     {{ post.title }}

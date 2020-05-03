@@ -13,6 +13,9 @@
                                     <a href="{{ category.get_absolute_url }}">{{ category.title }}</a>
                                 {% endfor %}
                             </div>
+                            <p>
+                                {{ post.published_date }}
+                            </p>
                             <a href="{{ post.get_absolute_url}}" class="btn btn-primary btn-post">Читать</a>
                         </div>
                     <div class="post-img">
