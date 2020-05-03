@@ -1,5 +1,5 @@
 body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
     padding: 0;
     margin: 0;
     letter-spacing: 0.09em;
@@ -21,9 +21,11 @@ div, p, form, input, a, span, button {
 }
 
 p {
+    font-family: 'Roboto', sans-serif;
     letter-spacing: 0.09em;
     line-height: 1.3em;
-    color: rgba(255,255,255,.5);
+    /*color: rgba(255,255,255,.5);*/
+    color: #000;
 }
 
 a, button, button:hover, button:focus, button:active, a:hover, a:active {
@@ -43,18 +45,21 @@ button {
 }
 
 .btn {
+    font-family: 'Roboto', sans-serif;
     width: 150px;
     line-height: 28px;
-    border: 1px solid #2d203f;
     font-size: 17px;
     font-weight: 700;
-    background-color: #2d203f;
-    color: #ffffffd4;
+    border: none;
+    color: #000;
 }
 
 .btn:hover {
-    background: #1f5ca9;
+    background: transparent;
+    color: #000000;
+    box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.46);
     border-color: transparent;
+    border-radius: 0px;
 }
 
 ul, li {
@@ -97,7 +102,6 @@ div, p, form, input, a, span, button {
 }
 
 .navbar-brand, .brand {
-    /*text-transform: uppercase;*/
     width: 100px;
 }
 
@@ -135,7 +139,6 @@ div, p, form, input, a, span, button {
 }
 
 .index-section {
-    /*height: 100vh;*/
     flex: 1 0 auto;
 }
 
@@ -161,8 +164,6 @@ div, p, form, input, a, span, button {
 /* -----Post Section ----- */
 .section-bg_pt {
     padding-top: 100px;
-	background: url('../image/White-Background.jpg') no-repeat center center  fixed;
-    background-size: cover;
 }
 
 .post-main-title {
@@ -171,15 +172,12 @@ div, p, form, input, a, span, button {
 
 .post-wrap {
     margin-bottom: 100px;
-    /*background: #2d203f;*/
-    background: #000;
-    border-radius: 5px;
-    box-shadow: 0px 0px 20px 8px rgba(0, 0, 0, 0.46)
+    border-radius: 3px;
+    box-shadow: 8px 9px 17px 0px rgba(0, 0, 0, 0.46);
 }
 
+
 .post-wrap:hover {
-/*    background-color: #211143;*/
-/*    transition: ease 0.5s;*/
     cursor: pointer;
 }
 
@@ -196,32 +194,57 @@ div, p, form, input, a, span, button {
 }
 
 .post-title {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 700;
     letter-spacing: 0.1em;
+    color: #000;
 }
 
 .post-text_detail {
     margin-top: 20px;
-    color: #fff;
+    color: #000;
+    font-size: 15px;
+}
+
+.post-published-date {
+    color: #000;
+    letter-spacing: 0.03em;
+    font-weight: 300;
+    margin-top: 15px;
+    font-size: 14px;
 }
 
 .category-wrap {
-    margin-top: 20px;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
 }
 
 .category-wrap a {
     display: inline-block;
-    color: #007bff;
+    color: #4f1c96;
+    font-weight: 700;
+    margin-right: 10px;
+    font-size: 14px;
 }
 
 .category-wrap a:hover {
-    color: #1c96ff;
+    color: #4f1c96;
 	transition: all 0.5s ease;
+}
+
+.category-title {
+    color: #000;
+    margin-right: 10px;
+    font-size: 14px;
+    font-weight: 400;
 }
 .btn-post {
     margin-top: auto;
-    background: #0069d9;
+    background: transparent;
+    outline: 1px solid #4f1c96;
+    /*border-color: */
+    color: #000;
 }
 
 .post-img {
@@ -234,7 +257,7 @@ div, p, form, input, a, span, button {
 }
 
 .post-figure img{
-    border-radius: 5px;
+    border-radius: 3px;
 }
 
 .navbar-right {

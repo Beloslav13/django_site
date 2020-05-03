@@ -9,11 +9,12 @@
                             <p class="post-text_detail">{{ post.text|truncatewords:20|striptags }}</p>
                             {% endautoescape %}
                             <div class="category-wrap">
+                                <p class="category-title">Категория:</p>
                                 {% for category in post.categories.all %}
                                     <a href="{{ category.get_absolute_url }}">{{ category.title }}</a>
                                 {% endfor %}
                             </div>
-                            <p>
+                            <p class="post-published-date">
                                 {{ post.published_date }}
                             </p>
                             <a href="{{ post.get_absolute_url}}" class="btn btn-primary btn-post">Читать</a>

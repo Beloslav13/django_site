@@ -64,7 +64,7 @@ INSTALLED_APPS = [
 #Thumbnail Photo
 THUMBNAIL_ALIASES = {
     '': {
-        'image_thumb': {'size': (350, 350), 'crop': 'smart', 'quality': 100},
+        'image_thumb': {'size': (350, 300), 'crop': 'smart', 'quality': 100},
     },
 }
 
