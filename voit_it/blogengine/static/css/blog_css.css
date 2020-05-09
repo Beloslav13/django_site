@@ -173,7 +173,7 @@ div, p, form, input, a, span, button {
 .post-wrap {
     margin-bottom: 100px;
     border-radius: 3px;
-    box-shadow: 8px 9px 17px 0px rgba(0, 0, 0, 0.46);
+    box-shadow: 3px 4px 10px 0px rgba(0, 0, 0, 0.18);
 }
 
 
@@ -263,7 +263,7 @@ div, p, form, input, a, span, button {
 .navbar-right {
     /*position: fixed;*/
     text-align: center;
-    box-shadow: 8px 9px 17px 0px rgba(0, 0, 0, 0.46);
+    box-shadow: 3px 4px 10px 0px rgba(0, 0, 0, 0.18);
     padding: 15px;
 }
 
