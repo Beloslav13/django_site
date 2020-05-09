@@ -12,7 +12,9 @@ def index(request):
 def posts_list(request):
     """Все посты"""
     posts = Post.objects.filter(published_date__lte=timezone.now())
-    return render(request, 'posts/posts_list.html', context={'posts': posts})
+    # TODO: придумать способ получения последних постов без копипаста
+    last_posts = Post.objects.all()[:3]
+    return render(request, 'posts/posts_list.html', context={'posts': posts, 'last_posts': last_posts})
 
 
 def post_details(request, slug):
@@ -23,9 +25,13 @@ def post_details(request, slug):
 
 def categories_list(request):
     categories = Category.objects.all()
-    return render(request, 'category/categories_list.html', context={'categories': categories})
+    # TODO: придумать способ получения последних постов без копипаста
+    last_posts = Post.objects.all()[:3]
+    return render(request, 'category/categories_list.html', context={'categories': categories, 'last_posts': last_posts})
 
 
 def category_detail(request, slug):
     category = Category.objects.get(slug__iexact=slug)
-    return render(request, 'category/category_detail.html', context={'category': category})
+    # TODO: придумать способ получения последних постов без копипаста
+    last_posts = Post.objects.all()[:3]
+    return render(request, 'category/category_detail.html', context={'category': category, 'last_posts': last_posts})

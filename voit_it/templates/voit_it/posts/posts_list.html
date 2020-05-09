@@ -16,19 +16,12 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-sm-9">
-                <div class="row">
-                    {% include 'includes/base_posts_list.html' %}
-                </div>
+            <div class="col-sm-8">
+                {% include 'includes/base_posts_list.html' %}
             </div>
-                <div class="col-sm-3">
-                        <div class="navbar-right">
-                            <h5 class="navbar-right-title">
-                                Тут боковое меню
-                            </h5>
-                        </div>
-                </div>
-
+            <div class="col-sm-4">
+                {% include 'includes/sidebar.html' %}
+            </div>
         </div>
     </div>
 </section>

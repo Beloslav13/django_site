@@ -72,13 +72,13 @@ h1, h2, h3, h4, h5, h6 {
 	padding: 0;
 	margin: 0;
 	text-transform: uppercase;
-    color: #fff;
+    color: #000;
 }
 
 h1, h2 {
     font-size: 45px;
     font-weight: 700;
-    color: #fff;
+    color: #000;
     text-align: center;
 }
 
@@ -261,11 +261,39 @@ div, p, form, input, a, span, button {
 }
 
 .navbar-right {
-    position: fixed;
+    /*position: fixed;*/
+    text-align: center;
+    box-shadow: 8px 9px 17px 0px rgba(0, 0, 0, 0.46);
+    padding: 15px;
 }
 
-.navbar-right-title {
-    color: #000
+.last-post-wrap {
+    margin-top: 20px;
+    border-top: 1px solid #00000029;
+    padding-top: 10px;
+}
+
+.last-post-title-wrap {
+    font-size: 17px;
+    text-transform: none;
+    font-weight: 400;
+}
+
+.last-post-title {
+    text-transform: none;
+    color: black;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    text-align: left;
+}
+
+.last-post-wrap a:hover {
+    color: #6117c6;
+}
+
+.post-published-date-last {
+    text-align: left;
 }
 
 /* ----- Category List ----- */

@@ -1,0 +1,21 @@
+<div class="navbar-right">
+    <div class="last-post">
+        <h5 class="last-post-title-wrap">
+            Последние опубликованные посты
+        </h5>
+        {% for last_post in last_posts %}
+            <div class="last-post-wrap">
+                <a href="{{ last_post.get_absolute_url}}" class="last-post-title">{{ last_post.title }}</a>
+                <div class="category-wrap">
+                    <p class="category-title">Категория:</p>
+                    {% for category in last_post.categories.all %}
+                        <a href="{{ category.get_absolute_url }}">{{ category.title }}</a>
+                    {% endfor %}
+                </div>
+            <p class="post-published-date post-published-date-last">
+                {{ last_post.published_date }}
+            </p>
+            </div>
+        {% endfor %}
+    </div>
+</div>
