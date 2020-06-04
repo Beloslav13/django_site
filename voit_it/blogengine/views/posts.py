@@ -1,5 +1,7 @@
 from django.shortcuts import render
 from django.utils import timezone
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
+
 
 from blogengine.models.posts import Post, Category
 
@@ -12,7 +14,19 @@ def index(request):
 def posts_list(request):
     """Все посты"""
     posts = Post.objects.filter(published_date__lte=timezone.now())
-    return render(request, 'posts/posts_list.html', context={'posts': posts})
+    paginator = Paginator(posts, 5) # Show 5 contacts per page
+
+    page = request.GET.get('page')
+    try:
+        post_paginator = paginator.page(page)
+    except PageNotAnInteger:
+        # If page is not an integer, deliver first page.
+        post_paginator = paginator.page(1)
+    except EmptyPage:
+        # If page is out of range (e.g. 9999), deliver last page of results.
+        post_paginator = paginator.page(paginator.num_pages)
+
+    return render(request, 'posts/posts_list.html', context={'posts': post_paginator})
 
 
 def post_details(request, slug):
