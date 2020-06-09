@@ -1,4 +1,4 @@
-{% extends 'base.html' %}
+{% extends 'blogengine/base.html' %}
 
 {% block title %}
 {{ block.super}}
@@ -17,10 +17,10 @@
         </div>
         <div class="row">
             <div class="col-sm-8">
-                {% include 'includes/base_posts_list.html' %}
+                {% include 'blogengine/includes/base_posts_list.html' %}
             </div>
             <div class="col-sm-4">
-                {% include 'includes/sidebar.html' %}
+                {% include 'blogengine/includes/sidebar.html' %}
             </div>
 
         <div class="pagination">

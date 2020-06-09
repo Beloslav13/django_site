@@ -8,7 +8,7 @@ from blogengine.models.posts import Post, Category
 
 def index(request):
     """Главная страница"""
-    return render(request, 'index.html')
+    return render(request, 'blogengine/index.html')
 
 
 def posts_list(request):
@@ -26,20 +26,20 @@ def posts_list(request):
         # If page is out of range (e.g. 9999), deliver last page of results.
         post_paginator = paginator.page(paginator.num_pages)
 
-    return render(request, 'posts/posts_list.html', context={'posts': post_paginator})
+    return render(request, 'blogengine/posts/posts_list.html', context={'posts': post_paginator})
 
 
 def post_details(request, slug):
     """Пост детально"""
     post = Post.objects.get(slug__iexact=slug)
-    return render(request, 'posts/post_details.html', context={'post': post})
+    return render(request, 'blogengine/posts/post_details.html', context={'post': post})
 
 
 def categories_list(request):
     categories = Category.objects.all()
-    return render(request, 'category/categories_list.html', context={'categories': categories})
+    return render(request, 'blogengine/category/categories_list.html', context={'categories': categories})
 
 
 def category_detail(request, slug):
     category = Category.objects.get(slug__iexact=slug)
-    return render(request, 'category/category_detail.html', context={'category': category})
+    return render(request, 'blogengine/category/category_detail.html', context={'category': category})

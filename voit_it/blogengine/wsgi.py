@@ -1,5 +1,5 @@
 """
-WSGI config for voit_it project.
+WSGI config for blogengine project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
