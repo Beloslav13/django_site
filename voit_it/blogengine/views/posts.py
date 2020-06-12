@@ -1,14 +1,20 @@
 from django.shortcuts import render
 from django.utils import timezone
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
-
+from rest_framework import viewsets
 
 from blogengine.models.posts import Post, Category
+from blogengine.rest.serializers.post import PostSerializer
 
 
 def index(request):
     """Главная страница"""
     return render(request, 'blogengine/index.html')
+
+
+class PostViewSet(viewsets.ModelViewSet):
+    serializer_class = PostSerializer
+    queryset = Post.objects.filter(published_date__lte=timezone.now())
 
 
 def posts_list(request):

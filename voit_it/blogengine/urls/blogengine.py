@@ -1,7 +1,6 @@
-from django.urls import path, include
+from django.urls import path
 
-from blogengine.views.posts import posts_list, post_details, index, categories_list, category_detail
-
+from blogengine.views.posts import post_details, index, categories_list, category_detail, posts_list
 
 urlpatterns = [
     path('', index, name='index'),
