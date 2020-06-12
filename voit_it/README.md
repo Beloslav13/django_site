@@ -17,15 +17,15 @@
 pip install -r requirements.txt
 </pre>
 <p>
+- применить миграции
+<pre>
+python manage.py migrate
+</pre>
+<p>
 - создать суперпользователя
 </p>
 <pre>
 python manage.py createsuperuser
-</pre>
-<p>
-- применить миграции
-<pre>
-python manage.py migrate
 </pre>
 <p>
 - и запустить сервер
