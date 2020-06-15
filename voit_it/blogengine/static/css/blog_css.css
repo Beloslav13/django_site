@@ -93,6 +93,8 @@ div, p, form, input, a, span, button {
     text-align: left;
     text-transform: none;
     color: #000;
+    border-bottom: 1px dotted;
+    padding-bottom: 35px;
 }
 
 /* ----- Header Styles ----- */
@@ -164,6 +166,7 @@ div, p, form, input, a, span, button {
 /* -----Post Section ----- */
 .section-bg_pt {
     padding-top: 100px;
+    background: #f2f2f2;
 }
 
 .post-main-title {
@@ -185,6 +188,7 @@ div, p, form, input, a, span, button {
     /*margin-bottom: 100px;*/
     justify-content: space-between;
     padding: 20px;
+    background: #fff;
 }
 
 .post-text {
@@ -265,6 +269,7 @@ div, p, form, input, a, span, button {
     text-align: center;
     box-shadow: 3px 4px 10px 0px rgba(0, 0, 0, 0.18);
     padding: 15px;
+    background: #fff;
 }
 
 .last-post-wrap {
